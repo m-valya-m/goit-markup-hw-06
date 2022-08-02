@@ -459,7 +459,10 @@
       <div class="modal">
         <div class="modal-close-button">
           <button class="modal-btn" type="button" data-modal-close>
-            <img src="./img/close.svg" alt="close" />
+            <svg class="ellipse" width="30px" height="30px">
+              <use href="./img/Ellipse.svg#Ellipse"></use>
+            </svg>
+            <svg class="close"><use href="./img/close.svg#close"></use></svg>
           </button>
         </div>
 
@@ -467,17 +470,15 @@
           <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
           <ul>
             <li class="form-fild">
-              <div class="list-form">
-                <label class="input-name" for="name">Имя</label>
+              <label class="input-name" for="name">Имя</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder=""
+                class="form-field"
+              />
 
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder=""
-                  class="form-field"
-                />
-              </div>
               <div class="form-field-icon">
                 <svg width="16px" height="16px">
                   <use xlink:href="./img/man.svg#man"></use>
@@ -486,17 +487,15 @@
             </li>
 
             <li class="form-fild">
-              <div class="list-form">
-                <label class="input-name" for="phone">Телефон</label>
+              <label class="input-name" for="phone">Телефон</label>
 
-                <input
-                  type="text"
-                  name="tel"
-                  id="phone"
-                  placeholder=""
-                  class="form-field"
-                />
-              </div>
+              <input
+                type="text"
+                name="tel"
+                id="phone"
+                placeholder=""
+                class="form-field"
+              />
 
               <div class="form-field-icon">
                 <svg width="16px" height="16px">
@@ -506,17 +505,15 @@
             </li>
 
             <li class="form-fild">
-              <div class="list-form">
-                <label class="input-name" for="email__">Почта</label>
+              <label class="input-name" for="email__">Почта</label>
 
-                <input
-                  type="email"
-                  class="form-field"
-                  name="mail"
-                  id="email__"
-                  placeholder=""
-                />
-              </div>
+              <input
+                type="email"
+                class="form-field"
+                name="mail"
+                id="email__"
+                placeholder=""
+              />
 
               <div class="form-field-icon">
                 <svg width="16px" height="16px">
@@ -536,12 +533,15 @@
             rows="4"
             placeholder="Введите текст"
           ></textarea>
-          <div class="agreement">
-            <input id="1" type="checkbox" name="value" />
-
-            <label for="1" class="terms"
-              >Соглашаюсь с рассылкой и принимаю
-              <a class="agreement-link"
+          <div class="agreement">            
+            <label class="container">
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <label for="1" class="terms">
+              Соглашаюсь с рассылкой и принимаю
+              <a
+                class="agreement-link"
                 href="https://prostopravo.com.ua/prava_biznesa/dogovornye_otnosheniya"
                 >Условия договора</a
               >
